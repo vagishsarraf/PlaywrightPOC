@@ -17,10 +17,6 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Prepare Allure history # Step to prepare Allure history directory
-      run: |
-        cd ..
-        mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
     - name: Run Playwright tests
       run: npm run testapi
     - uses: actions/upload-artifact@v4
