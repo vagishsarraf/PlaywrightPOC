@@ -49,4 +49,4 @@ jobs:
         PUBLISH_DIR: allure-history
 
     - name: Send Allure report via email
-      run: node send_email.js ${{ github.run_id }}
+      run: node send_email.js ${{ github.run_number }}
