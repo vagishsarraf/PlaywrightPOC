@@ -13,5 +13,8 @@
     "@playwright/test": "^1.44.1",
     "@types/node": "^20.12.13",
     "allure-playwright": "^3.0.0-beta.1"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.13"
   }
 }

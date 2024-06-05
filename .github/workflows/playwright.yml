@@ -19,6 +19,11 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npm run testapi
+    - name: Install required Python packages
+      run: zip allure-report.zip allure-report
+
+    - name: Send Allure report via email
+      run: node send_email.js ${{ github.run_id }}
     - uses: actions/upload-artifact@v4
       if: always()
       with:
