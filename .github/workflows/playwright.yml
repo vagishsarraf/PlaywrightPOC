@@ -49,6 +49,7 @@ jobs:
         PUBLISH_DIR: allure-history
     
     - name: Send report to Slack using CLI
+      if: always()
       env:
         SLACK_BOT_USER_OAUTH_TOKEN: ${{ secrets.SLACK_BOT_USER_OAUTH_TOKEN }}
       run : "SLACK_BOT_USER_OAUTH_TOKEN=$SLACK_BOT_USER_OAUTH_TOKEN npm run testapi"
