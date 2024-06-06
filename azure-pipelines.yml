@@ -22,6 +22,7 @@ steps:
   displayName: 'Run Playwright tests'
   env:
     CI: 'true'
-- task: PublishAllureReport@1
+- task: AllureGenerate@1
   inputs:
-    reportDir: 'allure-results' 
+    resultsDir: 'allure-results'
+    targetDir: 'allure-report/$(Build.BuildNumber)'
