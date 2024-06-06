@@ -12,13 +12,8 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '18'
   displayName: 'Install Node.js'
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
 - script: npm ci
   displayName: 'npm ci'
 - script: npx playwright install
@@ -27,10 +22,6 @@ steps:
   displayName: 'Run Playwright tests'
   env:
     CI: 'true'
-
 - task: PublishAllureReport@1
   inputs:
-    allureVersion: 2.27.0
-    testResultsDir: allure-results
-  displayName: Publish Reports
-    
+    reportDir: 'allure-results' 
