@@ -50,3 +50,8 @@ jobs:
 
     - name: Send Allure report via email
       run: node send_email.js ${{ github.run_number }}
+    
+    - name: Send report to Slack using CLI
+      env:
+        SLACK_BOT_USER_OAUTH_TOKEN: ${{ secrets.SLACK_BOT_USER_OAUTH_TOKEN }}
+      run : "echo secret is : $SLACK_BOT_USER_OAUTH_TOKEN"

@@ -39,7 +39,7 @@ test.describe("Booking - GetBookingIds", async () => {
     expect(response.status()).toBe(200);
     createdId = responseBoy.bookingid;
     console.log(createdId);
-    expect(responseBoy.booking.firstname).toEqual("Jim");
+    expect(responseBoy.booking.firstname).toEqual("Jnnim");
     expect(responseBoy.booking.lastname).toEqual("Brown");
     expect(responseBoy.booking.totalprice).toEqual(111);
     expect(responseBoy.booking.additionalneeds).toEqual("Breakfast");
