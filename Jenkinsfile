@@ -1,10 +1,9 @@
 pipeline {
     agent any
     
-    environment {
-        PLAYWRIGHT_VERSION = '1.15.2' // Update with the desired Playwright version
-        NODEJS_HOME = tool name: 'NodeJS', type: 'hudson.plugins.nodejs.tools.NodeJSInstallation'
-    }
+    tools {
+    nodejs "NodeJs"
+}
     
     stages {
         stage('Checkout') {
