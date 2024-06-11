@@ -35,14 +35,14 @@ test.describe("Booking - GetBookingIds", async () => {
       },
     });
     let responseBoy = await response.json();
-    expect(response.ok()).toBeTruthy();
-    expect(response.status()).toBe(200);
+    expect.soft(response.ok()).toBeTruthy();
+    expect.soft(response.status()).toBe(200);
     createdId = responseBoy.bookingid;
     console.log(createdId);
-    expect(responseBoy.booking.firstname).toEqual("Jim");
-    expect(responseBoy.booking.lastname).toEqual("Brown");
-    expect(responseBoy.booking.totalprice).toEqual(111);
-    expect(responseBoy.booking.additionalneeds).toEqual("Breakfast");
+    expect.soft(responseBoy.booking.firstname).toEqual("Jim");
+    expect.soft(responseBoy.booking.lastname).toEqual("Brown");
+    expect.soft(responseBoy.booking.totalprice).toEqual(111);
+    expect.soft(responseBoy.booking.additionalneeds).toEqual("Breakfast");
     
     const deleteRequest = await request.delete(`booking/${createdId}`, {
       headers: {
@@ -50,8 +50,8 @@ test.describe("Booking - GetBookingIds", async () => {
         "Cookie": `token=${token}`
       },
     });
-    expect(deleteRequest.status()).toBe(201);
-    expect(deleteRequest.ok()).toBeTruthy();
-    expect(deleteRequest.statusText()).toBe("Created");
+    expect.soft(deleteRequest.status()).toBe(201);
+    expect.soft(deleteRequest.ok()).toBeTruthy();
+    expect.soft(deleteRequest.statusText()).toBe("Created");
   });
 });
