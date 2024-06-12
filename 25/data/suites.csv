@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 12 12:10:29 GMT 2024","Wed Jun 12 12:10:30 GMT 2024","636","chromium","APITest.spec.js","Booking - GetBookingIds","","","Booking - DeleteBooking",""
+"passed","Wed Jun 12 12:10:28 GMT 2024","Wed Jun 12 12:10:29 GMT 2024","694","chromium","APITest.spec.js","Booking - GetBookingIds","","","Booking - GetBookingIds",""
