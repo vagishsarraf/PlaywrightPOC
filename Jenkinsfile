@@ -23,7 +23,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    sh 'npx playwright test'
+                    sh 'npm run testapi'
                 }
             }
         }
