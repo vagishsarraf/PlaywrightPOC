@@ -31,18 +31,12 @@ pipeline {
     
     post {
         always {
-            // Archive test results
-            archiveArtifacts 'test-results/**'
-            
-            // Publish HTML test reports (if generated)
-            publishHTML(target: [
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'test-results',
-                reportFiles: 'index.html',
-                reportName: 'Playwright Test Report'
-            ])
+            always {
+                    allure includeProperties:
+                     false,
+                     jdk: '',
+                     results: [[path: 'build/allure-results']]
+                }
         }
         
         success {
