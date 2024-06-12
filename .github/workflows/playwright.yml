@@ -54,7 +54,7 @@ jobs:
         SLACK_BOT_USER_OAUTH_TOKEN: ${{ secrets.SLACK_BOT_USER_OAUTH_TOKEN }}
       run : "SLACK_BOT_USER_OAUTH_TOKEN=$SLACK_BOT_USER_OAUTH_TOKEN npm run testapi"
 
-    - name: Upload HTML report to Azure
+    - name: Upload HTML report to Azure portal
       shell: bash
       run: |
         REPORT_DIR='run-${{ github.run_id }}-${{ github.run_attempt }}'
