@@ -33,6 +33,6 @@ steps:
   displayName: 'Publish Allure report'
 - task: PublishAllureReport@1
   inputs:
-    allureVersion: '3.0.0-beta.1'
+    allureDownloadUrl: 'https://github.com/allure-framework/allure-js/archive/refs/tags/v3.0.0-beta.1.tar.gz'
     testResultsDir: 'allure-results'
     reportName: 'allure-report'
