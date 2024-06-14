@@ -1,1 +1,0 @@
-[{"uid":"14f78ffd114209ba","name":"Booking - GetBookingIds","time":{"start":1718369807973,"stop":1718369808722,"duration":749},"status":"passed","severity":"normal"},{"uid":"67580d6762e79a8d","name":"Booking - DeleteBooking","time":{"start":1718369808723,"stop":1718369809339,"duration":616},"status":"passed","severity":"normal"}]
